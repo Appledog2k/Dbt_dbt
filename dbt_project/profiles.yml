@@ -1,0 +1,24 @@
+elementary:
+  outputs:
+    default:
+      type: "postgres"
+      host: "192.168.1.212"
+      port: 5433
+      user: "postgres"
+      password: "postgres"
+      dbname: "dft"
+      schema: "public_elementary"
+      threads: 10
+
+dbt_project:
+  outputs:
+    dev:
+      dbname: dft
+      host: 192.168.1.212
+      pass: 'postgres'
+      port: 5433
+      schema: public
+      threads: 10
+      type: postgres
+      user: postgres
+  target: dev
